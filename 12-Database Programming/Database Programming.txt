@@ -1,0 +1,74 @@
+﻿DB-API (SQL-API) for Python
+
+
+The Python standard for database interfaces is the Python DB-API. Most Python database interfaces adhere to this standard.
+
+Python DB-API is independent of any database engine, which enables you to write Python scripts to access any database engine. The Python DB API implementation for MySQL is MySQLdb. For PostgreSQL, it supports psycopg, PyGresQL and pyPgSQL modules. DB-API implementations for Oracle are dc_oracle2 and cx_oracle. Pydb2 is the DB-API implementation for DB2. Python’s DB-API consists of connection objects, cursor objects, standard exceptions and some other module contents, all of which we will discuss.
+
+
+You can choose the right database for your application. Python Database API supports a wide range of database servers such as−
+
+MySQL
+PostgreSQL
+Microsoft SQL Server
+Oracle
+Sybase
+
+
+Installing MySQLdb client
+--------------------------
+
+pip install mysqlclient
+
+
+Creating a Connection
+----------------------
+import MySQLdb
+
+conn = MySQLdb.connect('localhost', user='root', password='')
+
+
+Select Database
+
+conn.select_db("python")
+
+
+Creating Cursor
+---------------
+
+cursor = conn.cursor()
+
+
+Executing Sql Queries
+---------------------
+
+query="...."
+cursor.execute(query)
+
+
+Fetching Results from Select query
+----------------------------------
+
+1. cursor.fetchall() : Returns an array of records fetched from the last executed select query.
+
+2. cursor.fetchone() : Returns a single record fetched from the last executed select query.
+
+3. cursor.rowcount() : Returns the number of records fetched from the last executed select query.
+
+
+Main Operations of Database Programming
+1. C : Create/Insert
+2. R : Retreive/Select
+3. U : Update
+4. D : Delete
+
+
+
+
+
+
+
+Closing Connection
+-------------------
+
+conn.close()

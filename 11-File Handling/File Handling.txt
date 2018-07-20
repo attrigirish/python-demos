@@ -1,0 +1,124 @@
+File Handling
+
+Operations of File Handling
+1. Creating a File
+2. Saving Data in a File
+3. Reading Data from a File
+4. Updating a File
+5. Deleting a File
+6. Renaming a File
+7. Creating Directory
+8. Deleting Directory etc.
+
+
+#Creating a file in Python
+
+f=open(file_name,file_mode)
+
+e.g.
+
+f=open("myfile.txt","w")
+
+File Modes
+
+A. w
+B. r
+C. a
+D. w+
+E. r+
+F. a+
+G. wb or wb+
+H. rb or rb+
+I. ab or ab+
+
+
+
+#Closing a file
+
+f.close()
+
+
+#Writing data in a file
+
+f.write(string)
+
+e.g.
+
+f.write("Hello")
+
+
+#Reading data from a file
+
+f.read([no_of_chars])
+
+e.g.
+
+data=f.read()	#copy data of entire file in data variable
+
+e.g.
+
+data=f.read(10)	#reads 10 characters from the file and copy into data variable
+
+
+
+Other File Functions
+
+1. tell() : Tells the position of the cursor in the file.	
+2. seek(offset,whence) : Moves the cursor in the file.
+	
+		whence
+		------
+		0	:  Beginning of File
+		1 	:  Current Position
+		2 	:  End of File
+
+
+
+3. readline([line_number]) : Reads a single line.
+4. readlines() : Reads the data of entire file and puts them in a list line by line.
+5. writeline() : Writes a line of text and inserts a line break character
+6. writelines() : Writes an array(list) of lines into file.
+
+
+
+File Modes
+----------
+
+1. r
+2. w
+3. a
+4. r+
+5. w+
+6. a+
+7. rb
+8. wb
+9. ab
+
+
+
+Renaming and Deleting Files
+----------------------------
+
+1. os.rename(old_name,new_name)
+2. os.remove(file_name)
+
+
+
+
+
+Reading and Writing Structured Data
+------------------------------------
+
+Using Pickle
+
+import pickle
+
+
+Writing Structured data in a file
+
+pickle.dump(obj,file)
+
+
+Reading Structure data from file
+
+object = pickle.load(file)

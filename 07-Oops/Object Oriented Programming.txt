@@ -1,0 +1,25 @@
+Object Oriented Programming
+
+1. Encapsulation : Binding Data members and member functions together.
+2. Data Abstraction : Hiding unneccessary details.
+3. Polymorphism : One Interface Multiple Methods
+4. Inheritance : Defining new types on the basis of existing ones.
+
+
+
+Python classes
+
+
+class <classname>:
+	<property>=<value>
+	<property>=<value>
+	<property>=<value>
+	<property>=<value>
+	def <function-name>(<parameters>):
+		//function-body
+	def <function-name>(<parameters>):
+		//function-body
+	def <function-name>(<parameters>):
+		//function-body				
+
+

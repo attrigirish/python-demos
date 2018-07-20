@@ -1,0 +1,23 @@
+Arguments passed to a program through command prompt are called command line arguments.
+
+sys.argv
+---------
+
+sys.argv is the list of commandline arguments passed to the Python program. argv represents all the items that come along via the commandline input, it's basically a an array holding the command line arguments of our program.
+
+
+Using Command Line Arguments
+-----------------------------
+
+import sys
+program_name = sys.argv[0]
+arguments = sys.argv[1:]
+print("Program Name : ", program_name)
+print("Arguments Passed to Programs : ", arguments)
+
+
+
+Executing Program from Shell
+----------------------------
+
+>>>python script.py arg1 arg2 ...

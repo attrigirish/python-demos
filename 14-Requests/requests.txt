@@ -1,0 +1,77 @@
+JSON 
+
+JSON or JavaScript object notation. JSON is a data interchange or exchange format, which is used for machine to machine data transferration.
+
+JSON is both human and machine readable. 
+
+
+JSON Data Formats
+
+JSON Array
+[1,2,3,4]
+
+
+JSON Object
+{'name':'Girish Attri','id':'123'}
+
+
+Python requests module
+-----------------------
+
+Requests will allow you to send HTTP/1.1 requests using Python. With it, you can add content like headers, form data, multipart files, and parameters via simple Python libraries.
+
+Installing requests library
+
+pip install requests
+
+
+
+
+Fetching Data from a web server/Downloading data from internet
+
+Step 1 : Initializing a request
+
+webcontent=requests.get("url")
+
+
+Step 2 : Processing the data
+
+To get the data in Text Format
+
+data = webcontent.text
+
+
+To get the data in Json Format
+
+data = webcontent.json()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+Sets and Frozensets
+
+A set contains an unordered collection of unique and immutable objects. 
+
+
+Creating Sets
+-------------
+
+x = set(["Perl", "Python", "Java"])
+or
+x = {"Perl", "Python", "Java"}
+
+
+Dropping Duplicate Elements
+----------------------------
+
+cities = set(("Paris", "Lyon", "London","Berlin","Paris","Birmingham"))
+
+
+Immutable Sets
+--------------
+
+cities = set((["Python","Perl"], ["Paris", "Berlin", "London"])) 	#Error 
+
+
+Adding Elements in a Set
+------------------------
+
+cities = set(["Frankfurt", "Basel","Freiburg"])
+cities.add("Strasbourg")
+
+
+
+Frozen Sets
+------------
+
+Frozensets are like sets except that they cannot be changed, i.e. they are immutable:
+
+cities = frozenset(["Frankfurt", "Basel","Freiburg"])
+cities.add("Strasbourg")		#Error
+
+
+
+
+Set Functions
+
+1. add(element)   : Adds a new element in the set
+2. clear() : Removes all elements from the set.
+3. copy() : Returns a shallow copy of a set.
+4. difference(set) : Returns the difference of two sets.
+5. difference_update(set) : The method difference_update removes all elements of another set from this set. x.difference_update(y) is the same as "x = x - y"
+6. remove(element) : Removes specified element from the set.
+7. intersection(set) : Returns common set of elements in two sets.
+8. issubset(set) : x.issubset(y) returns True, if x is a subset of y.
+9. issuperset(set) : x.issuperset(y) returns True, if x is a superset of y.
+10. pop() : Removes an arbitrary set element.	
+

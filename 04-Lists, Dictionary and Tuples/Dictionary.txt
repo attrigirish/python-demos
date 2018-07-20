@@ -1,0 +1,58 @@
+Dictionary is a key value pair based collection of elements. Unlike lists dictionary elements can be accessed by using the key specified for an element.
+
+
+Creating Dictionary
+-------------------
+
+dict={'name':'Girish Attri','email':'girish@mail.com'};
+
+Accessing Dictionary Elements
+-----------------------------
+
+dict[key]
+
+e.g.
+
+dict["name"]
+
+
+Updating Dictionary
+-------------------
+
+dict[key]=value
+
+e.g.
+
+dict["email"]="girish.attri@gmail.com"
+
+
+Deleting Elements from Dictionary
+---------------------------------
+
+del dict[key]		: Removes the element specified by the key
+
+del dict 		: Removes entire dictionary
+
+dict.clear()		: Removes all dictionary elements
+
+
+
+Dictionary Functions
+---------------------
+
+1. clear() : Removes all elememtns
+2. copy() : Returns a shallow copy of dictionary
+3. get(key,default=None) : For key key, returns value or default if key not in dictionary
+4. has_key(key) : 	Returns true if key in dictionary dict, false otherwise
+5. items() : Returns a list of dict's (key, value) tuple pairs
+6. values() : Returns list of dictionary dict's values
+
+
+
+
+
+
+
+
+
+

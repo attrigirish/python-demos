@@ -1,0 +1,20 @@
+Constructor and Destructor
+
+Constructor
+
+Constructor is a special member function. A constructor can be called only once in an object's life cycle. Constructors cannot be called explicitly. A constructor invokes automatically whenever a new object is created of a class.
+
+Declaration:
+
+
+def __init__():
+	<function definition>
+
+
+Destructor is opposit to a constructor. Destructor function is used to release any occupied resource before an object terminates. Like a constructor, destructor function cannot be called explicitly. A destructor function get called when an object terminates.
+
+def __del__():
+	<function definition>
+
+
+

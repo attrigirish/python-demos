@@ -1,0 +1,102 @@
+Regular Expressions
+
+
+String Comparison V/s Regular Expressions (Pattern Matching)
+
+String Matching
+---------------
+
+data="......"
+search="galaxy"
+
+Pattern Matching
+----------------
+
+data="....."
+otpre="[0-9]{6}"
+
+
+
+Regular Expressions
+
+[] : Character Classes. Matches any character
+
+e.g.
+
+[abc] : Any Character from a, b or c
+[a-c] : Same as above
+[a-z] : Any alphabet Chracter
+[0-9] : Any digit
+[a-zA-Z0-9] : Any alphanumeric character
+[^a-zA-Z] : Not an alphabet
+
+OTP RE
+
+[0-9][0-9][0-9][0-9][0-9][0-9]
+
+
+Regular Expression Quantifiers
+
+{n} : Exact n occurences
+{m,n} : Minimum m occurences, maximum n occurences
+{,n} : Maximum n occurences
+{m,} : Minimum m occurences
+* 	: 	0, 1 or multiple occurences
++ 	:	1 or multiple occurences
+? 	:	0 or 1 occurence
+
+
+
+Positional Characters
+
+^ : Matches for a pattern at the beginning of a line
+$ : Matches for a pattern at the end of a line
+
+
+
+(ID|OD)-ICICI	:	Matches of either anil or sunil
+
+
+RE Patterns
+------------
+
+\w : Matches word Characters (Alphabets) 
+\W : Matches non word Characters (Non Alphabets)
+\s : Matches whitespace characters
+\d : Matches digits
+\D : Matches non digits
+
+
+Define a regular expression to match an OTP of six digits
+
+[0-9]{6}
+\d{6}
+
+Define a regular expression to match whether Kumar exists at the end of a string or not.
+
+Kumar$
+^(ID|OD)
+
+
+[^0-9]
+\D
+
+
+Python re Module
+-----------------
+
+Regular expressions (called REs, or regexes, or regex patterns) are essentially a tiny, highly specialized programming language embedded inside Python and made available through the re module.
+
+1. match() : Determine if the RE matches at the beginning of the string.
+
+2. search() : Scan through a string, looking for any location where this RE matches.
+
+3. compile() : Regular expressions are compiled into pattern objects, which have methods for various operations such as searching for pattern matches or performing string substitutions
+
+
+
+>>> value="989898"
+>>> exp=re.compile('\d{6}')
+>>> exp.match(value)
+----output-----
+<_sre.SRE_Match object; span=(0, 6), match='989898'>

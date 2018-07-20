@@ -1,0 +1,103 @@
+Functions 
+
+A function is a subprogram that performs a specific task. 
+
+Types of Functions
+
+1. Pre Defined
+e.g.
+
+sort(), print(), count(), strlen() etc.
+
+2. User Defined
+
+
+
+Advantages of Functions
+1. Eliminate Redundancy (Duplication of Code)
+2. Enhances Readability
+3. Easy Debugging
+
+
+
+
+n=5
+f=1
+for i in range(n+1):
+	f=f*i
+
+
+
+
+
+m!*n!/p!
+
+
+mf=1
+for i in range(m+1):
+	mf=mf*i
+
+nf=1
+for	i in range(n+1):
+	nf=nf*i
+
+pf=1
+for i in range(p+1):
+	pf=pf*i
+
+
+
+Declaration:
+
+
+def <function-name>([parameter-list]):
+	function-body
+	[return <value>]
+
+
+
+e.g.
+
+
+Parameterized Function
+
+def Sum(a,b):
+	c=a+b
+	return c
+
+Non Parameterized Function
+
+def Header():
+	print("ABC PVT. LTD")
+
+
+
+Calling A Function
+
+res=Sum(32,43)
+print(Sum(32,43))
+res=Sum(43,5)-43
+
+
+Header()
+res=Header()	#Error
+
+
+
+
+Program : Write a program to calculate sum of two numbers using function
+
+Program : Write a program to search for an element in an array using function. Function must return the index number where the element is found, otherwise return -1.
+
+
+
+
+
+
+
+
+
+
+
+
+

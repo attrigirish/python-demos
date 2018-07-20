@@ -1,0 +1,56 @@
+Inheritance
+
+In object-oriented programming, inheritance is the mechanism of basing an object or class upon another object (prototypal inheritance) or class (class-based inheritance), retaining the same implementation. In most class-based object-oriented languages, an object created through inheritance (a "child object") acquires all the properties and behaviors of the parent object. Inheritance allows programmers to create classes that are built upon existing classes,[1] to specify a new implementation while maintaining the same behaviors (realizing an interface), to reuse code and to independently extend original software via public classes and interfaces. 
+
+
+Scenario 1 : Parent-Child Base Relationship
+
+class A:
+	a=0
+	b=0
+	c=0
+
+
+class B(A):
+	d=0
+
+obj=B()
+
+obj.a=5
+obj.b=10
+obj.c=15
+
+
+
+Scenario 2 : Abstract Base Classes
+
+
+Bank
+	- acno
+	- name
+	- address
+	- pan
+	- aadhar
+	- email
+	- phone
+
+Saving <- Bank
+	- balance
+
+
+Fixed <- Bank
+	- deposit
+	- term
+
+Loan <- Bank
+	- amount
+	- emi
+	- tenure
+
+
+Declaration:
+
+class Child(Parent, [Parent2], ...):
+	//class definition
+
+

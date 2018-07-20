@@ -1,0 +1,59 @@
+An exception is an error that happens during execution of a program. When that error occurs, Python generate an exception that can be handled, which avoids your
+program to crash.
+
+
+Types of Exceptions:
+-------------------
+
+1. IOError : If the file cannot be opened.
+
+2. ImportError :  If python cannot find the module.
+
+3. ValueError :  Raised when a built-in operation or function receives an argument that has the right type but an inappropriate value.
+
+4. KeyboardInterrupt : Raised when the user hits the interrupt key (normally Control-C or Delete).
+
+5. EOFError : Raised when one of the built-in functions (input() or raw_input()) hits an end-of-file condition (EOF) without reading any data.
+
+
+Exception Handling Blocks:
+--------------------------
+
+try:
+    some statements here
+except:
+    exception handling
+
+
+Example:
+--------
+
+import sys
+print "Lets fix the previous code with exception handling"
+try:
+    number = int(input("Enter a number between 1 - 10"))
+except ValueError:
+    print "Error : numbers only"
+    sys.exit()
+print "you entered number", number
+
+
+Try...Except....Else Clause in Python
+--------------------------------------
+
+try:
+    data = something_that_can_go_wrong
+except IOError:
+    handle_the_exception_error
+else:
+    doing_different_exception_handling
+
+
+
+Try..finally clause:
+--------------------
+
+try:
+    data = something_that_can_go_wrong
+finally:
+	code_must_be_executed_under_all_circumstances

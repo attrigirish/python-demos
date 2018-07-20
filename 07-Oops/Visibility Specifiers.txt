@@ -1,0 +1,30 @@
+Python Classes 
+
+Visibility Access Specifier
+
+private : Only accessible to the same class.
+protected : Only accessible to the same class or derived classes.
+public : Accessible anywhere in the program.
+
+
+Note* : By default all members of a class are public.
+
+class Bank:
+	__balance=0
+
+	def Deposit(self,amount):
+		self.__balance=self.__balance+amount
+
+	def Withdrawl(self,amount):
+		self.__balance=self.__balance-amount
+
+
+b=Bank()
+
+b.__balance=10000			#error, cannot be used here
+b.Deposit(10000)
+b.Withdrawl(2000)
+
+
+
+

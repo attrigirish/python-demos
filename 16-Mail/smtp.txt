@@ -1,0 +1,36 @@
+smtplib (Simple Mail Transfer Protocol) Library
+
+The smtplib module defines an SMTP client session object that can be used to send
+mail to any Internet machine with an SMTP or ESMTP listener daemon. 
+
+SMTP stands for Simple Mail Transfer Protocol. 
+
+The smtplib modules is useful for communicating with mail servers to send mail.
+
+Sending mail is done with Python's smtplib using an SMTP server. 
+----------------------------------------------------
+
+import smtplib
+
+server = smtplib.SMTP('smtp.gmail.com', 587)
+
+#Next, log in to the server
+server.login("youremailusername", "password")
+
+#Send the mail
+msg = "
+Hello!" # The /n separates the message from the headers
+server.sendmail("you@gmail.com", "target@example.com", msg)
+
+
+
+
+
+
+
+Python Email Package
+---------------------
+
+from email.MIMEMultipart import MIMEMultipart
+from email.MIMEText import MIMEText
+

@@ -1,0 +1,24 @@
+﻿The OS module in Python provides a way of using operating system dependent functionality. 
+
+The functions that the OS module provides allows you to interface with the underlying operating system that Python is running on – be that Windows, Mac or Linux. 
+
+OS functions
+------------
+
+1. os.system() : Executing a shell command
+2. os.environ() : Get the users environment
+3. os.getcwd() : Returns the current working directory
+4. os.getgid() : Return the real group id of the current process.
+5. os.getuid() : Return the current process’s user id.
+6. os.getpid() : Returns the real process ID of the current process.
+7. os.listdir(path) : Return a list of the entries in the directory given by path.
+8. os.mkdir(path) : Create a directory named path with numeric mode mode.
+9.  os.remove(path) : Remove (delete) the file path.
+10. os.removedirs(path) : Remove directories recursively.
+11. os.rename(src,dst) : Rename the file or directory src to dst.
+12. os.rmdir(path) : Remove (delete) the directory path.
+
+
+
+
+
