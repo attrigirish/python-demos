@@ -1,0 +1,387 @@
+Python is a general-purpose interpreted, interactive, object-oriented, and high-level programming language.
+
+----------------------------------------------------------------------------
+
+
+Setting up Python Development Environment
+-----------------------------------------
+1. Download and Install Python software
+
+
+Python IDE
+----------
+
+1. IDLE
+
+
+Executing Python Commands
+--------------------------
+
+Python Scripts
+--------------
+
+
+Indentation:
+
+Python uses indentation for blocks, instead of curly braces. Both tabs and spaces are supported, but the standard indentation requires standard Python code to use four spaces.
+
+Application of Python language
+
+1. Console Applications
+2. GUI Applications
+3. Web Applications
+4. Scientific Applicatations etc.
+
+----------------------------------------------------------------------------
+
+Input and Output Statements
+
+1. input(message)
+2. print(message|output)
+
+----------------------------------------------------------------------------
+
+
+Variables and Types:
+
+Python is completely object oriented, and not "statically typed". You do not need to declare variables before using them, or declare their type. Every variable in Python is an object.
+
+1. Numbers (Integer, Long)
+
+a=1 								-			int
+b=1.1 or float(7) 					-			float
+
+2. String
+
+a='girish'							-			str
+a="girish"							-			str
+a="""girish"""						-			str
+
+3. Boolean
+
+a=True 								- 			bool
+
+4. None
+
+a=None
+
+5. List
+
+lst = [1, 4, 9, 16, 25]				- 			list
+
+6. Tuple
+
+tup = (1, 4, 9, 16, 25)				- 			list
+
+7. Dictionary
+
+contacts={"Girish":9898989898,"Sunil":9898989898}
+
+contacts = {}
+contacts["ravi"] = 938477566
+contacts["rahul"] = 938377264
+contacts["sunil"] = 947662781
+
+
+Checking the Data type of a variable|value
+
+A. type(value) : Returns the data type of a variable or value.
+
+B. isinstance(value,type) : Returns true if value if of type 'type'. Returns 	false otherwise
+
+
+
+----------------------------------------------------------------------------
+
+
+Operators
+
+1. Arithmetic 		(+,-,*,/,%,**,//)
+2. Relational 		(<,>,<=,>=,!=,==)
+3. Logical 			(and,or,Not())
+
+e.g. a>b and a>c
+e.g. a>b && a>c
+
+4. Assignment 		(=)
+5. Membership 		(in, not in)
+
+e.g. 5 in lst
+
+6. Identity			(is, is not)
+
+e.g. a is int
+
+7. Concatenation (+)
+
+e.g. "Anil" + "Kumar" 		(AnilKumar)
+
+
+
+
+----------------------------------------------------------------------------
+
+
+Conditional Statements
+
+1. if
+
+syntax: (Simple if)
+
+if condition:
+	statement(s)
+
+
+Syntax:	(if...else)
+
+if condition:
+	statement(s)
+else
+	statement(s)
+
+
+syntax:	(if...elif....else)
+
+if condition:
+	statement(s)
+elif condition
+	statement(s)
+else
+	statement(s)
+
+
+
+Looping Statements
+
+
+1. for loop
+
+Syntax:
+
+for iteratorvariable in collection:
+	statements
+
+
+e.g.
+
+for item in lst: 		//Print each element in list lst
+	print(item)
+
+
+for i in range(5):		//Iterates through 0 to 4
+	print(i)
+
+
+for i in range(2,10):	//Iterates through 2 to 9
+	print(i)
+
+for i in range(2,10,2):	//Print even number between 2 and 9
+	print(i)
+
+2. while loop
+
+syntax:
+
+while (condition):
+	statement(s)
+
+
+----------------------------------------------------------------------------
+
+Strings 
+
+a="Hello"
+
+Operators
+
+A. + 
+concatenates two strings
+
+B. *
+Multiplies string
+
+
+Functions
+
+A. count(sub [, start[, end]])
+Return the number of non-overlapping occurrences of substring sub in string
+
+B. find(sub[, start[, end]])
+Return the lowest index in S where substring sub is found. Return -1 on failure.
+
+C. isalnum()
+Return True if all characters in S are alphanumeric and there is at least one character in S, False otherwise.
+
+D. isalpha() 
+Return True if all characters in S are alphabetic and there is at least one character in S, False otherwise.
+
+E. isdecimal()
+Return True if there are only decimal characters in S, False otherwise.
+
+F. isdigit()
+Return True if all characters in S are digits and there is at least one character in S, False otherwise.
+
+G. islower()
+Return True if all cased characters in S are lowercase and there is at least one cased character in S, False otherwise.
+
+H. isnumeric() 
+Return True if there are only numeric characters in S, False otherwise.
+
+I. isupper() 
+Return True if all cased characters in S are uppercase and there is at least one cased character in S, False otherwise.
+
+J. lower() 
+Return a copy of the string S converted to lowercase.
+
+K. rfind(sub[, start[, end]])
+Return the highest index in S where substring sub is found. Return -1 on failure.
+
+L. split(sep=None, maxsplit=-1)
+Return a list of the words in S, using sep as the delimiter string.  If maxsplit is given, at most maxsplit splits are done. If sep is not specified or is None, any whitespace string is a separator and empty strings are removed from the result.
+
+M. strip([chars])
+Return a copy of the string S with leading and trailing whitespace removed.
+
+N. swapcase() 
+Return a copy of S with uppercase characters converted to lowercase and vice versa.
+
+O. title()
+Return a titlecased version of S
+
+P. upper()
+Return a copy of S converted to uppercase.
+
+Q. replace(old, new[, count])
+Return a copy of S with all occurrences of substring old replaced by new.
+
+
+----------------------------------------------------------------------------
+
+Lists (Arrays)
+
+Syntax:
+
+lst=[value1,value2,...valueN]			-		list of N elements
+or
+lst=[]									-		empty list
+
+
+Accessing list elements
+
+lst[index]
+
+e.g.
+
+lst[0]						-		prints 1 element
+lst[-1]						- 		prints last element
+lst[m,n]					-		prints n elements from position m
+
+
+List Functions
+
+A. __sizeof__()	
+size of List in memory, in bytes
+
+B. __len__() 		
+returns number of elements
+
+C. append(value)	
+append object to end
+
+D. clear()			
+remove all items from L
+
+E. count(value)		
+return number of occurrences of value
+
+F. index(value, [start, [stop]]) 
+return first index of value. Raises ValueError if the value is not present. 
+
+G. insert(index, object) 	
+insert object before index
+
+H. pop([index]) 	
+remove and return item at index (default last)
+
+I. remove(value)
+remove first occurrence of value.
+
+J. reverse() 
+reverse *IN PLACE*
+
+K. sort(key=None, reverse=False) 
+sort *IN PLACE*
+
+
+----------------------------------------------------------------------------
+
+
+Functions
+
+Declaration:
+
+def <functionname>([argument]):
+	statements
+
+
+e.g.
+
+def myfun()
+	print("Hello")
+
+
+def add(a,b)
+	c=a+b
+	print(c)
+
+def def(a,b)
+	c=a+b
+	return c
+
+
+
+----------------------------------------------------------------------------
+
+Object Oriented Programm (OOPS)
+
+1. Encapsulation : Binding multiple data fields together into a single entity. 
+
+2. Abstraction : Hiding unneccessary details from the end user.
+
+3. Inheritance : Creating New data types on the basis of existing data types.
+
+4. Polymorphism : One Interface multiple definitions
+
+Declaration
+
+
+class <classname>:
+	var=Value
+	var=Value
+	var=Value
+	....
+
+	def <function>(self,[args]):
+		statement(s)
+
+
+	def <function>(self,[args]):
+		statement(s)
+
+
+e.g.
+
+class Student:
+	name=''
+	course=''
+	fees=0.0
+
+	def set(self,name,course,fees):
+		self.name=name
+		self.course=course
+		self.fees=fees
+
+	def get(self)
+		print(self.name)
+		print(self.course)
+		print(self.fees)
