@@ -2,8 +2,8 @@ Define a class 'student' with the following specification
 
 admno              
 sname              
-eng. math, science 
+eng, math, science 
 total              
 
-Takedata()                   Function to accept values for admno, sname, eng, science and invoke ctotal() to                                    calculate total.
+Takedata()                   Function to accept values for admno, sname, eng, science and calculate total
 Showdata()                   Function to display all the data members on the screen.
