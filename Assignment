@@ -1,10 +1,48 @@
-Define a class batsman with the following specifications:
+#Getter and Setter Functions
 
-bcode                            
-bname                          
-innings, notout, runs       
-batavg                           it is calculated according to the formula : batavg =runs/(innings-notout)
+class Student:
+    roll=0
+    name=''
+    course=''
+    fees=0.0
+
+    def Input(self,r,n,c,f):
+        self.roll=r
+        self.name=n
+        self.course=c
+        self.fees=f
+    
+    def SetName(self,n):
+        self.name=n
+
+    def SetCourse(self,c):
+        self.course=c
+
+    def SetFees(self,f):
+        self.fees=f
+
+    def GetRoll(self):
+        return self.roll
+
+    def GetName(self):
+        return self.name
+
+    def GetCourse(self):
+        return self.course
+
+    def GetFees(self):
+        return self.fees
 
 
-readdata()                      Function to accept value from bcode, name, innings, notout and to calculate batavg
-displaydata()                   Function to display the data members on the screen.
+
+
+s=Student()
+
+i=input("Enter Id : ")
+
+s.Input(i,'Rishabh','ACCP',43000)
+
+print("Roll : ", s.GetRoll())
+print("Name : ", s.GetName())
+print("Course : ",s.GetCourse())
+print("Fees : ",s.GetFees())
