@@ -1,9 +1,10 @@
-Define a class 'student' with the following specification
+Define a class batsman with the following specifications:
 
-admno              
-sname              
-eng, math, science 
-total              
+bcode                            
+bname                          
+innings, notout, runs       
+batavg                           it is calculated according to the formula : batavg =runs/(innings-notout)
 
-Takedata()                   Function to accept values for admno, sname, eng, science and calculate total
-Showdata()                   Function to display all the data members on the screen.
+
+readdata()                      Function to accept value from bcode, name, innings, notout and to calculate batavg
+displaydata()                   Function to display the data members on the screen.
