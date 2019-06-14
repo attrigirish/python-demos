@@ -1,0 +1,209 @@
+List : A list is a collection of elements. A python list is a heterogeneous data structure. 
+
+Syntax:
+
+lst=[value1,value2,value3,....]
+
+e.g.
+
+lst=[43,65,34,76,45]
+or
+person=[1,'Giris Attri','girish@mail.com',9876450343]
+or
+lst=[]
+
+
+List Structure.
+
+
+Accessing List Elements
+
+lst=[11,22,33,44,55]
+
+lst[0]					#11
+lst[-1]					#55
+lst[2]					#33
+
+
+Iterating List Structures
+
+for value in lst:
+	print(value)
+
+or
+
+for i in range(5):
+	print(lst[i])
+
+	- When you have print selective elements only
+	- When you have to apply changes to the elements of the list.
+
+
+
+
+#User Defined lists
+
+
+#Input
+lst=[0,0,0,0,0]
+for i in range(5):
+	lst[i]=int(input("Enter A Value : "))
+
+#Ouput
+for value in lst:
+	print(value)
+
+
+Program: Write a program to input 5 elements in a list. Calculate sum and average of all elements.
+
+
+lst=[0,0,0,0,0]
+for i in range(5):
+	lst[i]=int(input("Enter Number : "))
+
+sum=0
+for value in lst:
+	sum=sum+value
+
+avg=sum/5
+print("Average = ", avg)
+
+
+Program: Write a program to input 10 elements in a list and find the largest value of it.
+
+
+
+List Functions
+
+1. insert(index,value) : Inserts the value at the specified index. If the index is greater than the size of the list element will be added at the last position.
+
+e.g.
+
+lst=[11,22,33,44,55]
+
+lst.insert(4,99)			#[11,22,33,44,99,55]
+lst.insert(10,99)			#[11,22,33,44,55,99]
+lst.insert(-1,99)			#[99,11,22,33,44,55]
+
+
+2. append(value) : Inserts the specified at the end of the list.
+
+lst=[11,22,33,44,55]
+
+lst.append(99)				#[11,22,33,44,55,99]
+
+3. pop(index=999999999999) : Removes the element from the specified index. If index is not defined last element will be removed.
+
+e.g.
+
+lst=[11,22,33,44,55]
+
+lst.pop(2)			#[11,22,44,55]
+lst.pop()			#[11,22,33,44]
+
+
+4. remove(value) : Removes the specified value from the list. If the value does not exist an error will be thrown.
+
+
+lst=[11,22,33,44,55]
+
+lst.remove(33)		#[11,22,44,55]
+lst.remove(99)		#Error
+
+#To Delete all occurences of an element
+while(True):
+	try:
+		lst.remove(33)
+	except:
+		break
+
+
+
+5. clear() : Removes all elements from the list.
+
+lst.clear()			#[]
+
+6. index(value) : Returns the position of the specified value. If the value does not exist an error will be thrown.
+
+lst.index(33)		#2
+lst.index(99)		Error
+
+while(True):
+	try:
+		print(lst.index(33))
+	except:
+		break
+
+7. count(value) : Returns the occurences of an element
+
+lst.count(33)		#1
+lst.count(99)		#0
+
+8. sort(reverse=False) : Arranges the element in ascending or descending order.
+
+lst=[55,22,11,44,33]
+
+lst.sort()					#[11,22,33,44,55]
+lst.sort(reverse=True)		#[55,44,33,22,11]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
