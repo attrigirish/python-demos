@@ -1,0 +1,211 @@
+Looping Statement:
+
+1. for
+2. while
+
+
+
+for loop
+
+for iterator in list:
+	statement(s)
+
+
+e.g.
+
+for value in [11,22,33,44,55]:
+	print(value)
+
+
+
+Program: Write a program to print all even elements of the following list:
+
+for value in [54,89,12,90,43,65,100]:
+	if(value%2==0):
+		print(value)
+
+
+
+Program: Write a program to print all numbers which are divisible 3 from 1 to 100.
+
+
+
+#Generating Lists in Python
+
+range(start=0,stop,step=1) : Generates/Returns a list of numbers from start to stop-1.
+
+e.g.
+
+range(1,11)   		#[1,2,3,...,10]
+range(2,21,2)		#[2,4,6,...,20]
+range(100,0,-1)		#[100,99,98,...,1]
+range(10)			#[0,1,2,..,9]
+
+
+
+for i in range(1,101,1):
+	if(i%3==0):
+		print(i)
+
+or
+
+for i in range(3,101,3):
+	print(i)
+
+
+
+
+#Sum
+
+sum=0
+for value of lst:
+	sum=sum+value
+
+
+#Count
+
+count=0
+for value of lst:
+	count=count+1
+
+
+Program: Write a program to calculate sum of all elements whose value is greater than 50. Also count the total no. occurences of the such elements.
+
+
+
+
+lst=[43,23,65,12,90,23,80,34,59,82]
+
+count=0
+sum=0
+for value in lst:
+	if(value>50):
+		sum=sum+value
+		count=count+1
+
+print("Sum = ", sum)
+print("Count = ", count)
+
+
+
+while Loop
+
+
+Sometimes, loop control may need to be based on the value of what we are processing. In this case, we would sentinel-controlled repetition. Sentinel-controlled repetition is sometimes called indefinite repetition because it is not known in advance how many times the loop will be executed. It is a repetition procedure for solving a problem by using a sentinel value (also called a signal value, a dummy value or a flag value) to indicate "end of data entry". The sentinel value itself is not a part of the processed data.
+
+An example of when we would use sentinel-controlled repetition is when we are processing data from a file and we do not know in advance when we would reach the end of the file.	
+
+
+Syntax:
+
+initialization
+while(condition):
+	statement(s)
+	updation
+
+i=1
+while(i<=10):
+	print(i)
+	i+=1
+
+or
+
+
+while(condition):
+	statement(s)
+
+
+e.g.
+
+while(n>0):			
+	n=n//10
+
+
+
+
+#Mini App
+
+
+while(True):
+	print("1. Add")
+	print("2. Subtract")
+	print("3. Multiply")
+	print("4. Divide")
+	print("0. Exit")
+
+	choice=int(input("Enter Your Choice : "))
+
+	if(choice==1):
+		a=int(input("Enter First Number : "))
+		b=int(input("Enter Second Number : "))
+		c=a+b
+		print("Sum : ", c)
+	elif(choice==2):
+		a=int(input("Enter First Number : "))
+		b=int(input("Enter Second Number : "))
+		c=a-b
+		print("Subtract : ", c)
+	elif(choice==0):
+		exit(0)
+	else:
+		print("Invalid Choice : ")
+ 
+
+
+
+
+
+1. Write a program to print all factors of a given no.
+
+E.g.
+
+Input
+24
+
+Output
+1 2 3 4 6 8 12 24
+
+
+n=int(input("Enter a Number : "))
+for i in range(1,n+1):
+	if(n%i==0):
+		print(i)
+
+
+Write a program to count all factorial of a no.
+
+Input
+24
+Output
+8
+
+
+count=0
+n=int(input("Enter A Number : "))
+for i in range(1,n+1):
+	if(n%i==0):
+		count=count+1
+print(count)
+	
+
+Write a program to check if a number is prime no. or not. (hint: Prime no. 2 has two factors only)
+
+count=0
+n=int(input("Enter A Number : "))
+for i in range(1,n+1):
+	if(n%i==0):
+		count=count+1
+
+if(count==2):
+	print("Prime Number")
+else:
+	print("Not a Prime Number")
+
+	
+
+
+
+
+
+
+
