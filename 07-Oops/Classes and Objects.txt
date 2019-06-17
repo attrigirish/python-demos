@@ -1,0 +1,204 @@
+Classes and Objects
+
+Write a class Bank with following data members:
+	- acno
+	- name
+	- branch
+	- balance
+
+
+You are required to create two object of class Bank and input and output those objects.
+
+
+class Bank:
+	acno=0
+	name=''
+	branch=''
+	balance=0.0
+
+
+c1=Bank()
+
+c1.acno=12345
+c1.name='Ankit'
+c1.branch='Rohini'
+c1.balance=50000
+
+c2=Bank()
+
+c2.acno=12346
+c2.name='Ravi'
+c2.branch='Pitampura'
+c2.balance=25000
+
+
+print("Customer 1 Details")
+print("Account Number : ", c1.acno)
+print("Name : ", c1.name)
+print("Branch : ", c1.branch)
+print("Balance : ", c1.balance)
+
+
+
+
+#Functions inside class Body (Member Functions)
+
+class Bank:
+	acno=0
+	name=''
+	branch=''
+	balance=0.0
+
+
+	def OpenAccount(self):	
+		self.acno=input("Enter Account Number : ")
+		self.name=input("Enter Name : ")
+		self.branch=input("Enter Branch : ")
+		self.balance=int(input("Enter Balance : "))
+
+	def AccountDetails(self):
+		print("Customer Details")
+		print("Account Number : ", self.acno)
+		print("Name : ", self.name)
+		print("Branch  : ", self.branch")
+		print("Balance : ", self.balance)
+
+	def Deposit(self):
+		amount=int(input("Enter Amount : "))
+		self.balance=self.balance+amount
+		print("Transaction completed successfully")
+		print("Avaialable Balance : ", self.balance)
+
+	def Withdrawl(self):
+		amount=int(input("Enter Amount : "))
+		if(self.balance>=amount):
+			self.balance=self.balance-amount
+			print("Transaction completed successfully")
+			print("Available Balance : ", self.balance)
+		else:
+			print("Transaction Declined : Insufficient Balance")
+
+
+
+c1=Bank()
+c1.OpenAccount()					#Bank.OpenAccount(c1)
+c1.AccountDetails()
+c1.Withdral()
+c1.Deposit()
+
+
+
+#self provides the reference of the object for which the current has been called. self parameter can be used to access the data members of the referenced object.
+
+
+
+Program: 
+
+Define a class 'Flight' with following description:
+
+	-	A data member Flight number 
+	-	A data member Destination 
+	-	A data member Distance 
+	-	A data member Fuel 
+
+	-	A member function CALFUEL() to calculate the value of Fuel as per the following criteria
+        Distance                      Fuel
+        <=1000                       500
+        1000-2000                    1100
+     	>2000                        2200
+
+	-	A function FEEDINFO() to allow user to enter values for Flight Number, Destination, Distance & call function CALFUEL() to calculate the quantity of Fuel
+
+	-	A function SHOWINFO() to allow user to view the content of all the data members
+
+
+
+class Flight:
+	flightno=0
+	destination=''
+	distance=0.0
+	fuel=0.0
+
+	def CALFUEL(self):
+		if(self.distance<=1000):
+			return 500	
+		elif(self.distance<=2000):
+			return 1100
+		else:
+			2200
+
+	def FEEDINFO(self):
+		self.flightno=int(input("Enter Flight No : "))
+		self.destination=input("Enter Destination : ")
+		self.distance=int(input("Enter Distance : "))
+		self.fuel=self.CALFUEL()
+
+	def SHOWINFO(self):
+		print("Flight No. : ", self.flightno)
+		print("Destination : ", self.destination)
+		print("Distance : ", self.distance)
+		print("Fuel : ", self.fuel)
+
+
+j=Flight()
+j.FEEDINFO()
+j.SHOWINFO()
+
+
+
+
+#Parameterized Functions
+
+class Flight:
+	flightno=0
+	destination=''
+	distance=0.0
+	fuel=0.0
+
+	def CALFUEL(self):
+		if(self.distance<=1000):
+			return 500	
+		elif(self.distance<=2000):
+			return 1100
+		else:
+			2200
+
+	def FEEDINFO(self,flightno,destination,distance):
+		self.flightno=flightno
+		self.destination=destination
+		self.distance=distance
+		self.fuel=self.CALFUEL()
+
+	#Setter or Mutator
+	def SETDISTANCE(self,distance):
+		self.distance=distance
+		self.fuel=self.CALFUEL()
+
+	def SETDESTINATION(self,destination):
+		self.destination=destination
+
+	#Getter or Accessor
+
+	def GETFLIGHTNO(self):
+		return self.flightno
+
+	def GETDISTANCE(self):
+		return self.distance
+
+
+j=Flight()
+
+j.FEEDINFO(12345,'Mumbai',1250)
+print("Flight No : ", j.GETFLIGHTNO())
+print("Destination : ", j.DESTINATION())
+print("Distance : ", j.DISTANCE())
+print("Fuel : ", j.FUEL())
+
+
+j.SETDESTINATION("Hyderabad")
+j.SETDISTANCE(1500)
+
+print("Flight No : ", j.GETFLIGHTNO())
+print("Destination : ", j.DESTINATION())
+print("Distance : ", j.DISTANCE())
+print("Fuel : ", j.FUEL())
