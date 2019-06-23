@@ -1,0 +1,68 @@
+pip : Python Package Index Manager
+
+PIP (Python Package Index Manager) is a command line utility that let's install, uninstall and manage python packages on your computer. 
+
+
+Installing a Python Package
+
+>pip install <package-name>
+
+e.g.
+
+>pip install numpy
+>pip install requests
+
+
+
+Python Installation Directory
+
+C:\Users\<user>\AppData\Local\Programs\Python\Python<ver>\
+C:\Users\<user>\AppData\Local\Programs\Python\Python<ver>\Scripts
+
+
+
+Installing specfic version of Python Package
+
+>pip install <package-name=ver>
+
+e.g.
+
+>pip install pyhon=2.7
+
+
+
+Uninstalling Python Packages
+
+>pip uninstall <package-name>
+
+
+
+
+Virtual Environments
+
+A virtual environment lets you use different combinations of settings for different projects. 
+
+
+Installing virtualenv
+
+>pip install virtualenv
+
+
+
+Creating virtual environment
+
+>virtualenv <name>
+
+e.g.
+
+>virtualenv ml
+
+
+Activating Virtual Environment
+
+>ml\scripts\activate
+
+
+Deactivating virtual Environment
+
+>ml\scripts\deactivate
