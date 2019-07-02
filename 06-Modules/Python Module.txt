@@ -1,12 +1,77 @@
-Python Module
-
-Simply, a module is a file consisting of Python code. A module can define functions, classes and variables. A module can also include runnable code.
+Python Modules
 
 
-Import module(s) using import keyword:
+A module is a python file.
 
-import <module-name>
 
-e.g.
+1. Shared Modules
+2. Executable Modules
 
-import math
+
+Create a file pylib.py (Shared Module) and write following functions in it.
+
+def Sum(a,b,c=0,d=0,e=0):
+	return a+b+c+d+e
+
+def Factorial(n):
+	fac=1
+	for value in range(n,0,-1):
+		fac=fac*value
+	return fac
+
+
+Create an another file pyclient.py (Executable Module) and write the following code in it.
+
+
+#Import Python Module using import statement - Method 1
+
+import pylib
+
+#Invoking Module Function
+
+result=pylib.Sum(54,65)
+print(result)
+
+
+#Import Python Module using from import statement - Method 2
+
+from pylib import Factorial
+
+#Invoking Module Function
+
+result=Factorial(5)
+print(result)
+
+
+
+
+#Import Python Module using from import as statement - Method 3
+
+from moduleA import Sum as listSum					#Sum of list of elements
+from moduleB import Sum	as intSum				#Sum of two numbers
+
+#Invoking Module Function
+
+result=listSum([32,54,65])	
+
+
+#Using as to shorten Names
+import tensorflow as tf
+
+
+
+#Import Python Module using from import * statement - Method 4
+
+from pylib import *
+
+#Invoking Function 
+
+res=Factorial(5)
+print(res)
+
+
+
+
+Packages : If a file is for a module a folder is a package.
+
+Note: To make any folder a python package you must create an empty __ini__.py file in it.
