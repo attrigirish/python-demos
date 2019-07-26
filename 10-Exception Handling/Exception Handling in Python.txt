@@ -1,0 +1,67 @@
+Exception Handling in Python
+
+Types of Errors
+
+1. Syntactical Errors
+
+
+In effect, syntax errors represent grammar errors in the use of the programming language.  Common examples are:
+
+A. Misspelled variable and function names
+B. Missing colons
+C. Improperly matches indents, square brackets, and curly braces
+D. Incorrect format in selection and loop statements
+
+Syntax errors can be found by compiling or executing the program. A program will not successfully compile or execute if there will be any syntax error in it.
+
+
+
+
+
+2. Symantical Errors
+
+Semantic errors occur during the execution of the code, after it has been
+parsed as grammatically correct. These have to do not with how statements
+are constructed, but with what they mean. Such things as incorrect
+variable types or sizes, nonexistent variables, subscripts out of range,
+and the like, are semantic errors.
+
+3. Logical Errors
+
+Logic errors occur when there is a design flaw in your program.
+Common examples are:
+
+Multiplying when you should be dividing
+Adding when you should be subtracting
+Opening and using data from the wrong file
+Displaying the wrong message
+
+Logical errors are difficult ones to trace or find in a program. Logical errors does not change the flow of the program neither they interrupt the program execution. Logical errors can be found in a program during the testing process the evaulating the program outputs with the actual outputs.
+
+
+4. Runtime Errors (Exceptions)
+
+Runtime errors occur when a program with no syntax errors asks the computer to do something that the computer is unable to reliably do.  Common examples are:
+
+Trying to divide by a variable that contains a value of zero
+Trying to open a file that doesn't exist
+
+There is no way for the compiler to know about these kinds of errors when the program is compiled.
+
+Unlike the syntax errors which occurs at the time of compilatation, run time errors occurs during execution time. Run time errors are difficulat to find because it is not every time when a program is executed it will give a runtime a error.
+
+Run time errors can be handled gracefully by including try..except statements in your program. 
+
+
+
+Exception Handling
+
+Exception handling is a way of telling a program to perform a alternative set of operations if
+a runtime error occurs in a program.
+
+Exception Handling in Python
+
+try:
+    #statements where an exception may occur
+except:
+    #statements to execute if an execption occur
