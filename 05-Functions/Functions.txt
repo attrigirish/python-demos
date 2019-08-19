@@ -1,95 +1,319 @@
-Functions 
+Functions
 
-A function is a subprogram that performs a specific task. 
+Write a program to calculate factorial of a number.
 
-Types of Functions
+n*(n-1)*(n-2)*..*1
 
-1. Pre Defined
-e.g.
+For E.g.
 
-sort(), print(), count(), strlen() etc.
-
-2. User Defined
+Input 5
+Output 120      (5*4*3*2*1)
 
 
-
-Advantages of Functions
-1. Eliminate Redundancy (Duplication of Code)
-2. Enhances Readability
-3. Easy Debugging
+fac=1
+for i in range(n,0):
+	fac=fac*i
 
 
 
-
-n=5
-f=1
-for i in range(n+1):
-	f=f*i
+res=m!+n!/p!
 
 
+mfac=1
+for i in range(m,0):
+	mfac=mfac*i
+
+nfac=1
+for i in range(n,0):
+	nfac=nfac*i
+
+pfac=1
+for i in range(n,0):
+	pfac=pfac*i
+
+res=mfac+nfac/pfac
 
 
-
-m!*n!/p!
-
-
-mf=1
-for i in range(m+1):
-	mf=mf*i
-
-nf=1
-for	i in range(n+1):
-	nf=nf*i
-
-pf=1
-for i in range(p+1):
-	pf=pf*i
-
+A function is a subprogram or module that performs a specific task in the application. A function may be called several times in an application, thus is helps in reducing the total no. instructions needed to solve the problem.
 
 
 Declaration:
 
-
-def <function-name>([parameter-list]):
-	function-body
-	[return <value>]
-
+def <function-name>(parameter(s)):
+	function-definition
 
 
 e.g.
 
+def Factorial(x):
+	fac=1
+	for i in range(x,0,-1):
+		fac=fac*i
+	return fac
 
-Parameterized Function
-
-def Sum(a,b):
-	c=a+b
-	return c
-
-Non Parameterized Function
-
-def Header():
-	print("ABC PVT. LTD")
+res=Factorial(m)+Factorial(n)/Factorial(p)
 
 
-
-Calling A Function
-
-res=Sum(32,43)
-print(Sum(32,43))
-res=Sum(43,5)-43
-
-
-Header()
-res=Header()	#Error
+Note: The default return value of a function is None.
 
 
 
 
-Program : Write a program to calculate sum of two numbers using function
-
-Program : Write a program to search for an element in an array using function. Function must return the index number where the element is found, otherwise return -1.
+Write a function to 'Count' to accept a list as a parameter and return the no. of positive integers from the function.
 
 
+def Count(lst):
+	count=0
+	for value in lst:
+		if(value>0):
+			count=count+1
+	return count
+
+#Test Statement
+lst=[54,34,-23,-54,12]
+pos=Count(lst)
+print("Positive Integers : ", pos)
+
+
+
+Write a function "Search" that will accept a list and a value to search as parameters. Function will return "Found" if the value is found in the list, else the function must return "Not Found"
+
+
+def Search(lst,search):
+	isfound=False
+	for value in lst:
+		if(value==search):
+			isfound=True
+	if(isfound==True):
+		return "Found"
+	else
+		return "Not Found"
+
+
+
+lst=[11,22,33,44,55]
+search=33
+res=Search(lst,search)
+print(res)
+
+
+
+
+#Multiple Return Values in Function
+
+def Func():
+	return 1,2,3,4,5
+
+a,b,c,d,e=Func()
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+
+
+
+Program: Write a function Split which will accept a list as parameter, return the lists even and odd elements from the function.
+
+
+#Test Statements
+
+#####
+def Split(lst):
+	evens=[]
+	odds=[]
+
+	for value in lst:
+		if(value%2==0):
+			evens.append(value)
+		else:
+			odds.append(value)
+
+	return evens,odds
+
+lst=[32,11,33,40,29,45]
+evens,odds=Split(lst)
+print(evens)
+print(odds)
+
+
+
+Program: Write a function to Aggregate to accept a list of parameters and return Sum, Max, Min, and Average of all elements.
+
+
+
+def Aggregate(lst):
+	sum=0
+	avg=0
+	max=lst[0]
+	min=lst[0]
+
+	for value in lst:
+		sum=sum+value
+		if(max<value):
+			max=value
+		if(min>value):
+			min=value
+	avg=sum/len(lst)
+	return sum,avg,max,min
+
+
+n=int(input("Enter Size of List : "))
+lst=[]
+for i in range(n):
+	lst.append(int(input("Enter Value : ")))
+
+sum,avg,max,min=Aggregate(lst)
+print("Sum = ", sum)
+print("Average = ", avg)
+print("Maximum = ", max)
+print("Minimum = ", min)
+
+
+
+
+Default Argument Functions/Optional Parameter Function
+
+
+sort(reverse=False)
+
+lst.sort()
+lst.sort(reverse=True)
+
+Default arguments/optional arguments can be added to any function by assigning a default value to a function parameter. Default arguments can always be added from right to left direction. 
+
+
+e.g.
+
+def Register(name,email,gender='Prefer Not to Say',age=0):
+	print("Name : ", name)
+	print("Email : ", email)
+	print("Gender : ", gender)
+	print("Age : ", age)
+
+
+
+
+Register("Anil Kumar","anil@mail.com")
+Register("Anil Kumar","anil@mail.com","Male")
+Register("Anil Kumar","anil@mail.com","Male",23)
+
+
+
+
+Write a function Sum which can accept upto 5 integer values. Calculate and print sum of all numbers.
+
+
+def Sum(a=0,b=0,c=0,d=0,e=0):
+	sum=a+b+c+d+e
+	return sum
+
+
+#Test Statement
+
+print(Sum()) 			#0
+print(Sum(5,5,5))		#15
+print(Sum(5,5,5,5,5))	#25
+
+
+
+
+#Named Arguments
+
+
+def Register(name,email,gender='Prefer Not to Say',age=0):
+	print("Name : ", name)
+	print("Email : ", email)
+	print("Gender : ", gender)
+	print("Age : ", age)
+
+
+
+Register(name="Anil",email="anil@mail.com",age=25)
+Register(email="anil@mail.com",name="Anil",age=25)
+Register(age=25,"Anil","anil@mail.com")			#Error
+
+Note: You can use a positional argument in function after a named argument.
+
+Register(age=25,name="Anil",email="anil@mail.com") 	#OK
+Register("Anil","Anil@mail.com",age=25)  			#OK
+
+
+
+Write an equivalent function statement for the following functions from C++ programming language.
+
+
+
+CreateAccount(int acno,char[] name, char[] branch){}
+CreateAccount(int acno,char[] name, double balance){}
+CreateAccount(int acno,char[] name, double balance, char[]branch)
+CreateAccount(int acno,char[] name, double balance, char[]branch, char[]aadhar)
+
+
+
+def CreateAccount(acno,name,branch='HO',balance=0,aadhar='NA'):
+	print(acno)
+	print(name)
+	print(branch)
+	print(balance)
+	print(aadhar)
+
+
+
+CreateAccount(12345,"Girish Attri")
+CreateAccount(12345,"Girish Attri","Rohini")
+CreateAccount(12345,"Girish Attri",balance=50000)
+CreateAccount(acno=12345,name="Girish Attri",balance=50000)
+CreateAccount(balance=50000,branch="Rohini",12345,"Girish Attri") #Error
+
+
+Key Points
+
+1. Optional parameters can be declared from right to left only.
+		def Fun(a,b=0):			#Valid
+		def Fun(a=0,b):			#InValid
+		def Fun(a,b=0,c):		#Invalid
+
+
+2. It is invalid to use a positional argument after a named argument
+
+		Fun(5,b=10)				#Valid
+		Fun(b=10,5)				#Invalid
+
+3. Named arguments can be used for both optional as well as mandatory 	parameters.
+
+		
+
+Program: Write a function to calculate sum of any number of  values.
+
+
+#Test Statements
+
+print(Sum(5))											#5
+print(Sum(5,10))										#15
+print(Sum(5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5))		#20
+
+
+
+
+
+
+Varargs Arguments (Variable Arguments)
+
+Varargs is a function parameter which can accept any no. of parameters. 
+
+
+def Sum(*values):
+	sum=0
+	for value in values:
+		sum=sum+value
+	return s
+
+
+print(Sum())
+print(Sum(5))											
+print(Sum(5,10))										
+print(Sum(5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5))		
 
 
 
@@ -101,3 +325,91 @@ Program : Write a program to search for an element in an array using function. F
 
 
 
+
+
+
+def CreateAccount(acno,name,balance=0.0,branch='',aadhar=''):
+	...
+
+
+
+Varargs (Variable Length Arguments)
+
+Varargs is a variable length list parameter that reads all the values from a function call statement. 
+
+
+def Sum(*values):
+	sum=0
+	for value in values:
+		sum=sum+value
+	return sum
+
+
+print(Sum())	
+print(Sum(1,1,1,1,1,1,1,1,1,1,1,1))
+print(Sum(1,1))
+
+
+
+
+Write a Function 'Report' to accept name, gender, highest qualification and skills of a user and print the data in following format:
+
+
+	Name  		: 			Anil
+	Gender 		: 			Male
+	High Qual 	: 			M.Tech
+
+	------------------------------
+	Skills
+	------------------------------
+		- C
+		- C++
+		- Python
+		- Java
+
+#Test Statements
+	
+
+
+
+
+
+
+def Report(name,gender,qual,*skills):
+	print("Name : ", name)
+	print("Gender : ", gender)
+	print("Qualification : ", qual)
+	print("Skills")
+	for value in skills:
+		print(" - ", value)
+
+
+Report("Anil","Male","M.Tech", "C","C++","Python","Java")	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
