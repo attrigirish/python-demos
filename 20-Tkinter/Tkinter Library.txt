@@ -1,0 +1,149 @@
+Tkinter Library
+
+Python's Library for GUI Applications
+
+
+
+#Creating Tkinter Applications
+
+from tkinter import *
+root=Tk()
+
+
+
+
+Tkinter Widgets
+
+1. Label Widget
+2. Button Widget
+3. Entry Widget
+4. Text Widget
+5. Radiobutton Widget
+6. Checkbutton Widget
+7. LabelFrame Widget
+8. Listbox Widget
+9. Menu Widget
+10. OptionMenu Widget
+
+
+Declarations
+
+1. Label Widget
+
+Label(window,text="caption")
+
+e.g.
+
+root=Tk()
+lblHeading=Label(root,text="ABC Public School")
+
+
+2. Button Widget
+
+Button(window,text="caption",command=function)
+
+e.g.
+
+btnSave=Button(root,text="Save Record",command=SaveRecord)
+
+
+3. Entry Widget
+
+Entry(window)
+
+e.g.
+
+txtName=Entry(root)
+
+
+4. Text Widget (Single Line / Multi Line)
+
+Text(window,text="Default Value", height="#rows" width="#cols")
+
+e.g.
+
+txtName=Text(root,height=1,width=40)
+txtRemark=Text(root,height=5,width=50)
+
+5. Radiobutton Widget
+
+Radiobutton(window, text="caption" variable="name" value="value")
+
+e.g.
+
+rbnMale=Radiobutton(root,text="Male",variable="gender",value="M")
+rbnFemale=Radiobutton(root,text="Female",variable="gender",value="F")
+
+6. Checkbutton Widget
+
+Checkbutton(window, text="caption" variable="name")
+
+e.g.
+
+cbxEnglish=Checkbutton(root,text="English",variable="language")
+cbxHindi=Checkbutton(root,text="Hindi",variable="language")
+
+
+7. LabelFrame Widget
+
+LabelFrame(window, text="LabelFrame")
+
+e.g.
+
+lblFrame=LabelFrame(root,text="Payment Mode")
+
+8. Listbox Widget
+
+Listbox(window)
+
+e.g.
+
+lbxCities = Listbox(root)
+
+cities = ["New Delhi","Chennai","Kolkata","Mumbai"]
+for city in lbxCities:
+    lbxCities.insert(END, city)
+
+
+9. OptionMenu Widget
+
+OptionMenu(window, control_variable, options)
+
+cv=StringVar(root)
+cities=("New Delhi","Chennai","Kolkata") 
+omx=OptionMenu(root,cv,*cities)
+
+
+10. Menu Widget
+
+Menu(window)
+
+e.g.
+
+menu=Menu(root)
+
+fileMenu=Menu(menu,tearoff=False)
+fileMenu.add_command(label="New",command=Function)
+fileMenu.add_command(label="Open", command=Function)
+
+editMenu=Menu(menu,tearoff=False)
+editMenu.add_command(label="Undo", command=Function)
+editMenu.add_command(label="Redo", command=Function)
+
+menu.add_cascade(label="File", menu=fileMenu)
+menu.add_cascase(label="Edit", menu=editMenu)
+menu.add_command(label="Help",command=Function)
+
+root.config(menu=menu)
+
+
+
+Displaying Tkinter Widgets
+
+1. pack() : Packs the elements in the horizontal or vertical order.
+
+2. grid() : Adds an element to the row and column position.
+
+3. place() : Displays an element at the absolute position in the window.
+
+
